@@ -1,11 +1,11 @@
-//META{"name":"AnimatedStatus","source":"https://raw.githubusercontent.com/toluschr/BetterDiscord-Animated-Status/master/Animated_Status.plugin.js","website":"https://github.com/toluschr/BetterDiscord-Animated-Status"}*//
+//META{"name":"AnimatedStatus","source":"https://github.com/AlexodeYT/Better-discord_statut-anime/master/Animated_Status.plugin.js","website":"https://github.com/AlexodeYT/Better-discord_statut-anime"}*//
 
 class AnimatedStatus {
 	/* BD functions */
-	getName() { return "Animated Status"; }
-	getVersion() { return "0.13.2"; }
-	getAuthor() { return "toluschr"; }
-	getDescription() { return "Animate your Discord status"; }
+	getName() { return "Statut animé"; }
+	getVersion() { return "2.0"; }
+	getAuthor() { return "Alexode_YT"; }
+	getDescription() { return "Anime ton statut Discord"; }
 
 	SetData(key, value) {
 		BdApi.setData("AnimatedStatus", key, value);
