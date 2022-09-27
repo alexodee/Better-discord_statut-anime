@@ -1,4 +1,4 @@
-#Statut animé pour Better Discord
+# Statut animé pour Better Discord
 
 * [Installation](#Installation)
 * [Utilisation](#Usage)
