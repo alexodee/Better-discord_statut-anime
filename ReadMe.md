@@ -1,83 +1,83 @@
-# BetterDiscord-Animated-Status
+# Mieux-discord_statut-anime
 
 * [Installation](#Installation)
-* [Usage](#Usage)
-* [Settings](#Settings)
+* [Utilisation](#Utilisation)
+* [Paramètres] (#Paramètres)
   * [Timeout](#Timeout)
-  * [The Editor](#The-Editor)
-  * [Emojis](#Emojis)
-    * [Regular Emoji](#Regular-Emoji)
+  * [L'éditeur](#L'éditeur)
+  * [Émojis](#Émojis)
+    * [Emoji régulier] (#Emoji régulier)
     * [Nitro Emoji](#Nitro-Emoji)
-  * [Examples](#Examples)
+  * [Exemples](#Exemples)
 
 ## Installation
-Install using the very convenient [BetterDiscord installer](https://github.com/BetterDiscord/Installer/releases/latest) \
-Download [Animated_Status.plugin.js](/Animated_Status.plugin.js?raw=true) into the following directory \
-Mac: `~/Library/Preferences/BetterDiscord`\
-Windows: `%appdata%\BetterDiscord\plugins`\
-Linux: `~/.config/BetterDiscord/plugins`
+Installez à l'aide du [programme d'installation de BetterDiscord] (https://github.com/BetterDiscord/Installer/releases/latest) très pratique \
+Téléchargez [Animated_Status.plugin.js](/Animated_Status.plugin.js?raw=true) dans le répertoire suivant \
+Mac : `~/Bibliothèque/Préférences/BetterDiscord`\
+Windows : `%appdata%\BetterDiscord\plugins`\
+Linux : `~/.config/BetterDiscord/plugins`
 
-## Usage
-Open Discord, go to Settings\>Plugins, enable AnimatedStatus and click on Settings.\
-Enter the required information into the input fields and click the `save` button.
-Clicking `done` without saving will discard your settings.
+## Utilisation
+Ouvrez Discord, allez dans Paramètres\>Plugins, activez AnimatedStatus et cliquez sur Paramètres.\
+Entrez les informations requises dans les champs de saisie et cliquez sur le bouton "enregistrer".
+Si vous cliquez sur "Terminé" sans enregistrer, vos paramètres seront supprimés.
 
-## Settings
+## Réglages
 <table align=center">
-  <td> <img src="Screenshots/Settings_Dark.png"> </td>
-  <td> <img src="Screenshots/Settings_Light.png"> </td>
+  <td> <img src="Captures d'écran/Settings_Dark.png"> </td>
+  <td> <img src="Captures d'écran/Settings_Light.png"> </td>
 </table>
 
-### Timeout
-The value specifies the length of each animation step in milliseconds.
-Example: With a timeout of 2000, the following animation would take 4 seconds to complete, as 2 keyframes last 2 seconds each.
+### Temps libre
+La valeur spécifie la longueur de chaque étape d'animation en millisecondes.
+Exemple : avec un délai d'attente de 2000, l'animation suivante prendrait 4 secondes pour se terminer, car 2 images clés durent 2 secondes chacune.
 ```
 abc
-def
+définitivement
 ```
-To prevent the discord server from being spammed with requests, the minimum allowed timeout is hardcoded to be 2.9 seconds. \
-Logically, the animation timeout should be at least `2900`. At best, it should be roughly `10000` milliseconds (10 seconds) for the animation to look smooth on other clients. \
-In the mobile app, the status isn't updated consistently, i.e. the list of server members is updated based on the users actions in the app. Don't be surprised, if the animation doesn't appear smooth, or skips frames. \
-^ According to [@pintoso](https://github.com/pintoso)
+Pour éviter que le serveur Discord ne soit spammé avec des demandes, le délai d'attente minimum autorisé est codé en dur à 2,9 secondes. \
+Logiquement, le délai d'attente de l'animation devrait être d'au moins `2900`. Au mieux, il devrait être d'environ `10000` millisecondes (10 secondes) pour que l'animation soit fluide sur les autres clients. \
+Dans l'application mobile, le statut n'est pas mis à jour de manière cohérente, c'est-à-dire que la liste des membres du serveur est mise à jour en fonction des actions des utilisateurs dans l'application. Ne soyez pas surpris si l'animation n'est pas fluide ou saute des images. \
+^ Selon [@pintoso](https://github.com/pintoso)
 
-### The Editor
-Each cell added with the `+`-button adds a new step to the status animation. \
-Clicking the `-`-button will remove the last step. \
-An empty cell will unset your status temporarily. This was added due to a request, but is subject to change in the future.
+### L'éditeur
+Chaque cellule ajoutée avec le bouton `+` ajoute une nouvelle étape à l'animation d'état. \
+Cliquer sur le bouton `-` supprimera la dernière étape. \
+Une cellule vide désactivera temporairement votre statut. Cela a été ajouté en raison d'une demande, mais est sujet à changement à l'avenir.
 
-In the latest version, the decision was made to remove the raw editor from the plugin. It was merely an unstable textual interface to the JSON config file. \
-**You can still use the RAW-Mode**, by clicking `Open Plugins Folder` inside the settings and editing `AnimatedStatus.config.json`. Do this at your own risk, you might break stuff.
+Dans la dernière version, la décision a été prise de supprimer l'éditeur brut du plugin. Il s'agissait simplement d'une interface textuelle instable vers le fichier de configuration JSON. \
+**Vous pouvez toujours utiliser le mode RAW** en cliquant sur "Ouvrir le dossier des plugins" dans les paramètres et en modifiant "AnimatedStatus.config.json". Faites cela à vos risques et périls, vous pourriez casser des choses.
 
-### Emojis
-#### Regular Emoji
-Use an emoji selector (Windows: <kbd>Win</kbd>+<kbd>.</kbd>). \
-Alternatively, use [a unicode table](https://unicode.org/emoji/charts/full-emoji-list.html) and copy the emoji you'd like to have as your status. \
-The `emoji_name` field **may not contain whitespace**. Otherwise, the discord server will silently ignore your status request.
-Due to uncertainties about nitro emoji names, the plugin does currently not automatically remove whitespace.
+### Émojis
+#### Emoji régulier
+Utilisez un sélecteur emoji (Windows : <kbd>Win</kbd>+<kbd>.</kbd>). \
+Vous pouvez également utiliser [un tableau Unicode](https://unicode.org/emoji/charts/full-emoji-list.html) et copier l'emoji que vous souhaitez avoir comme statut. \
+Le champ `emoji_name` **ne doit pas contenir d'espace**. Sinon, le serveur Discord ignorera silencieusement votre demande de statut.
+En raison d'incertitudes concernant les noms des nitro emoji, le plugin ne supprime actuellement pas automatiquement les espaces blancs.
 
 #### Nitro Emoji
-- Open a discord Chat, type `\`. \
-  <img src="Screenshots/nitro0.png">
-- Select the emoji you want to include in your status using the emoji picker. \
-  <img src="Screenshots/nitro1.png">
-- Notice that the message changed to `<:emojiname:emojiid>`. The values inside the brackets (emojiname and emojiid) are the values required for the status. \
-  <img src="Screenshots/nitro2.png">
-- Edit the settings accordingly \
-  <img src="Screenshots/nitro3.png">
+- Ouvrez un chat discord, tapez `\`. \
+  <img src="Captures d'écran/nitro0.png">
+- Sélectionnez l'emoji que vous souhaitez inclure dans votre statut à l'aide du sélecteur d'emoji. \
+  <img src="Captures d'écran/nitro1.png">
+- Notez que le message est devenu `<:emojiname:emojiid>`. Les valeurs entre parenthèses (emojiname et emojiid) sont les valeurs requises pour le statut. \
+  <img src="Captures d'écran/nitro2.png">
+- Modifiez les paramètres en conséquence \
+  <img src="Captures d'écran/nitro3.png">
 
-### Examples
-Some screenshots are sped up, so the ReadMe looks more appealing.
+### Exemples
+Certaines captures d'écran sont accélérées, de sorte que le ReadMe semble plus attrayant.
 
-#### Clock
-- **Result:** \
-  <img src="Screenshots/JS_Clock.gif">
-- **Emoji-Field:** \
-  <code> eval ['🕛','🕐','🕑','🕒','🕓','🕔','🕕','🕖','🕗','🕘','🕙','🕚'][((new Date()).getHours()%12)]; </code>
+#### L'horloge
+- **Résultat:** \
+  <img src="Captures d'écran/JS_Clock.gif">
+- **Champ Emoji :** \
+  <code> eval ['🕛','🕐','🕑','🕒','🕓','🕔','🕕','🕖','🕗','🕘','🕙',' 🕚'][((nouvelle date()).getHours()%12)] ; </code>
 
-#### Clock And Text
-- **Result:** \
-  <img src="Screenshots/JS_ClockText.png">
-- **Emoji-Field:** \
-  <code> eval ['🕛','🕐','🕑','🕒','🕓','🕔','🕕','🕖','🕗','🕘','🕙','🕚'][((new Date()).getHours()%12)]; </code>
-- **Text-Field:** \
-  <code> eval let fmt=t=>(t<10?'0':'')+t;let d=new Date();`${fmt(d.getHours())}:${fmt(d.getMinutes())}:${fmt(d.getSeconds())}`; </code>
+#### Horloge et texte
+- **Résultat:** \
+  <img src="Captures d'écran/JS_ClockText.png">
+- **Champ Emoji :** \
+  <code> eval ['🕛','🕐','🕑','🕒','🕓','🕔','🕕','🕖','🕗','🕘','🕙',' 🕚'][((nouvelle date()).getHours()%12)] ; </code>
+- **Champ de texte:** \
+  <code> eval let fmt=t=>(t<10?'0':'')+t;let d=new Date();`${fmt(d.getHours())}:${fmt( d.getMinutes())} :${fmt(d.getSeconds())}` ; </code>
