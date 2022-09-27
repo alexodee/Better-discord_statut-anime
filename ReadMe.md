@@ -2,11 +2,11 @@
 
 * [Installation](#Installation)
 * [Utilisation](#Usage)
-  * [Temps d'exécution](#Temps-d-exécution)
-  * [L'éditeur](# L-éditeur)
+  * [Temps d'exécution](#Temps d'exécution)
+  * [L'éditeur](#L'éditeur)
   * [Emojis](#Emojis)
-    * [Emojis basiques](# Emojis-basiques)
-    * [Emojis nitro](# Emojis-nitro)
+    * [Emojis basiques](# Emojis basiques)
+    * [Emojis nitro](#Emojis nitro)
 
 ## Installation
 Installez Better Discord avec ce lien [BetterDiscord installer](https://github.com/BetterDiscord/Installer/releases/latest) \
@@ -38,10 +38,6 @@ En raison d'incertitudes concernant les noms des nitro emoji, le plugin ne suppr
 
 #### Emojis nitro
 - Ouvrez un chat discord, tapez `\`. \
-   <img src="Screenshots/nitro0.png">
 - Sélectionnez l'emoji que vous souhaitez inclure dans votre statut à l'aide du sélecteur d'emoji. \
-   <img src="Screenshots/nitro1.png">
 - Notez que le message est devenu `<:emojiname:emojiid>`. Les valeurs entre parenthèses (emojiname et emojiid) sont les valeurs requises pour le statut. \
-   <img src="Screenshots/nitro2.png">
 - Modifiez les paramètres en conséquence \
-   <img src="Screenshots/nitro3.png">
