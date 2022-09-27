@@ -2,11 +2,11 @@
 
 * [Installation](#Installation)
 * [Utilisation](#Usage)
-  * [Temps d'exécution](#Temps d'exécution)
+  * [Temps d'exécution](#Temps-d'exécution)
   * [L'éditeur](#L'éditeur)
   * [Emojis](#Emojis)
-    * [Emojis basiques](# Emojis basiques)
-    * [Emojis nitro](#Emojis nitro)
+    * [Emojis basiques](#Emojis-basiques)
+    * [Emojis nitro](#Emojis-nitro)
 
 ## Installation
 Installez Better Discord avec ce lien [BetterDiscord installer](https://github.com/BetterDiscord/Installer/releases/latest) \
