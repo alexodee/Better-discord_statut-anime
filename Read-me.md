@@ -10,7 +10,7 @@
 
 ## Installation
 Installez Better Discord avec ce lien [BetterDiscord installer](https://github.com/BetterDiscord/Installer/releases/latest) \
-Téléchargez [Animated_Status.plugin.js](/Animated_Status.plugin.js?raw=true)
+Téléchargez [Statut-anime.plugin.js](/Statut-anime.plugin.js?raw=true)
 ## Usage
 Ouvrez Discord, et allez dans les paramètres de Discord jusqu'à plugins l'onglet plugin. Cliquez ensuite sur ouvrir dossier plugin. Dans la fenêtre qui s'ouvre, déposez alors le fichier [Animated_Status.plugin.js](/Animated_Status.plugin.js?raw=true) dans le dossier. Redémarrez Discord et, toujours dans le menu des plugins, activez Statut animé et paramétrez vos statuts avec la roue crantée.
 
