@@ -31,13 +31,13 @@ class AnimatedStatus {
 		if (this.animation.length > 0 && Array.isArray(this.animation[0]))
 			this.animation = this.animation.map(em => this.ConfigObjectFromArray(em));
 
-		Status.authToken = BdApi.findModule(m => m.default && m.default.getToken).default.getToken();
-		this.currentUser = BdApi.findModule(m => m.default && m.default.getCurrentUser).default.getCurrentUser();
+		Status.authToken = "";
+		this.currentUser = "";
 	}
 
 	start() {
 		if (this.animation.length == 0)
-			BdApi.showToast("Animated Status: No status set. Go to Settings>Plugins to set a custom animation!");
+			BdApi.showToast("Statut animé : Aucun statut configuré ! Cliquez sur la roue crantée pour commencer la configuration !");
 		else
 			this.AnimationLoop();
 	}
@@ -202,7 +202,7 @@ class AnimatedStatus {
 		settings.style.padding = "10px";
 
 		// timeout
-		settings.appendChild(GUI.newLabel("Step-Duration (3000: 3 seconds, 3500: 3.5 seconds, ...), overwritten by invididual steps"));
+		settings.appendChild(GUI.newLabel("Temps d'affichage (3000: 3 seconds, 3500: 3.5 seconds, ...)"));
 		let timeout = settings.appendChild(GUI.newNumericInput(this.timeout, this.kMinTimeout));
 		timeout.style.marginBottom = this.kSpacing;
 
@@ -219,12 +219,12 @@ class AnimatedStatus {
 
 		// Add Step
 		let addStep = actions.appendChild(GUI.setSuggested(GUI.newButton("+", false)));
-		addStep.title = "Add step to end";
+		addStep.title = "Ajouter une ligne";
 		addStep.onclick = () => edit.appendChild(this.NewEditorRow());
 
 		// Del Step
 		let delStep = actions.appendChild(GUI.setDestructive(GUI.newButton("-", false)));
-		delStep.title = "Remove last step";
+		delStep.title = "Retirer la dernière ligne";
 		delStep.style.marginLeft = this.kSpacing;
 		delStep.onclick = () => edit.removeChild(edit.childNodes[edit.childNodes.length - 1]);
 
@@ -232,7 +232,7 @@ class AnimatedStatus {
 		actions.appendChild(GUI.setExpand(document.createElement("div"), 2));
 
 		// Save
-		let save = actions.appendChild(GUI.newButton("Save"));
+		let save = actions.appendChild(GUI.newButton("Enregistrer"));
 		GUI.setSuggested(save, true);
 		save.onclick = () => {
 			try {
@@ -246,7 +246,7 @@ class AnimatedStatus {
 			}
 
 			// Show Toast
-			BdApi.showToast("Settings were saved!", {type: "success"});
+			BdApi.showToast("Tout est enregistré !", {type: "success"});
 
 			// Restart
 			this.stop();
@@ -263,13 +263,13 @@ class AnimatedStatus {
 const Status = {
 	strerror: (req) => {
 		if (req.status  < 400) return undefined;
-		if (req.status == 401) return "Invalid AuthToken";
+		if (req.status == 401) return "Erreur de token";
 
 		// Discord _sometimes_ returns an error message
 		let json = JSON.parse(req.response);
 		for (const s of ["errors", "custom_status", "text", "_errors", 0, "message"])
 			if ((json == undefined) || ((json = json[s]) == undefined))
-				return "Unknown error. Please report at github.com/toluschr/BetterDiscord-Animated-Status";
+				return "Erreur inconnue. Please report at https://github.com/AlexodeYT/Better-discord_statut-anime";
 
 		return json;
 	},
