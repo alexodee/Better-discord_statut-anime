@@ -31,8 +31,8 @@ class AnimatedStatus {
 		if (this.animation.length > 0 && Array.isArray(this.animation[0]))
 			this.animation = this.animation.map(em => this.ConfigObjectFromArray(em));
 
-		Status.authToken = "";
-		this.currentUser = "";
+		Status.authToken = "Insérez ici votre token Discord";
+		this.currentUser = "Insérez ici votre ID Discord";
 	}
 
 	start() {
